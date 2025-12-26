@@ -7,7 +7,7 @@ The generation process consists of two main phases:
 - **Voice Synthesis:** Utilizing Amazon Polly's Standard TTS with SSML for "whispering" effects.
 - **Spatial Post-Processing:** Using Unity to simulate binaural 3D audio dynamics to mimic realistic ear-to-ear movement.
 
-## 🛠️ Technology Stack & Rationale
+## ✨ Technology Stack & Rationale
 **1. Text-to-Speech (TTS) Engine**
 - **Tool:** Amazon Polly (Standard Engine)
 - **Technique:** Speech Synthesis Markup Language (SSML)
@@ -24,7 +24,7 @@ While Neural TTS often offers smoother flow, we selected the Standard TTS engine
 
 **Addressing the Anticipation Effect:** To prevent the listener from predicting the audio movement (which can diminish the ASMR response), we implemented a randomized movement algorithm rather than a fixed loop.
 
-## ⚙️ Implementation Details
+## ✨ Implementation Details
 **Step 1: SSML Configuration**
 We utilize SSML tags to modulate the voice output. The script must be wrapped in the whispering effect tag.
 
@@ -88,3 +88,8 @@ void Update()
         }
     }
 ```
+## ✨**Notes & Tips**
+1. **Audio Plosives:** During user testing, we observed that certain pronunciations are prone to **plosives** (popping sounds) in whispering mode.
+>**Recommendation:**
+>1. **Post-Processing**: Use audio editing software to reduce these artifacts.
+>2. **Word Selection**: Identify and avoid specific vocabulary that triggers these sounds.
